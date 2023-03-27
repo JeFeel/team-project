@@ -1,0 +1,89 @@
+body{
+  font-size: 20px;
+}
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* container 작업 */
+container{
+  width: 80%;
+  height: 800px;
+  background: #ccc;
+  border: 1px solid #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* question파트 */
+#question{
+  width: 80%;
+  height: 60%;
+  background: url('world_map.jpg') no-repeat center/contain;
+  /* border: 1px solid #000; */
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+}
+#question .map {
+  width: 80%;
+  height: 60%;
+  /* border: 1px solid #000; */
+  margin: 30px auto;
+  /* background: lightblue; */
+}
+
+.ask {
+
+  width: 60%;
+  height: 100px;
+  border: 1px solid #000;
+  background: pink;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+}
+
+/* answer파트 */
+#answer{
+  width: 60%;
+  height: 20%;
+  background: greenyellow;
+  /* border: 1px solid #000; */
+  margin-top: 30px;
+}
+#answer ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* border: 1px dashed #000; */
+  padding: 20px 10px;
+  /* background: lightseagreen; */
+}
+#answer ul li{
+  list-style: none;
+  margin: 0 auto;
+
+}
+#answer ul li > button{
+  width: 150px;
+  height: 100px;
+  border: 0;
+  border-radius: 30px;
+  font-size: 2em;
+}
+#answer ul li > button:hover{
+  background: rgb(248, 248, 134);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#answer ul li > button:active{
+  background: gold;
+}
