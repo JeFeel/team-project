@@ -67,3 +67,6 @@ const quiz = {
     },
   ]
 };
+
+const countryList = quiz.countryList;
+export default countryList;
