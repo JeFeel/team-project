@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <script src="main.js"></script>
+  <script type="module"  src="main.js"></script>
   <container class="center">
     <div id="question">
       <div class="map">
@@ -19,16 +19,19 @@
       
     </div>
     <div class="ask">
-      <span> Q.이 나라의 수도는?</span>
-      <span class="country"></span>
+      Q.<span class="country">이 나라</span>의 수도는?
     </div> 
     <div id="answer">
-      <ul>
+      <!-- <ul>
         <li class="button1"><button>보기1</button></li>
         <li class="button2"><button>보기2</button></li>
         <li class="button3"><button>보기3</button></li>
         <li class="button4"><button>보기4</button></li>
-      </ul>
+      </ul> -->
+      <div class="box">
+        <input type="text" placeholder="정답을 입력해주세요!" id="answerText">
+        <button id="answerCheck">제출</button>
+      </div>
     </div>
   </container>
 </body>

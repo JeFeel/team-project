@@ -12,7 +12,7 @@ body{
 container{
   width: 80%;
   height: 800px;
-  background: #ccc;
+  background: #ccc url('world_map.jpg') no-repeat center/cover;
   border: 1px solid #000;
   position: relative;
   display: flex;
@@ -25,7 +25,7 @@ container{
 #question{
   width: 80%;
   height: 60%;
-  background: url('world_map.jpg') no-repeat center/contain;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif') no-repeat center/contain;
   /* border: 1px solid #000; */
   margin: 2%;
   display: flex;
@@ -48,6 +48,7 @@ container{
   margin: 0 auto;
   text-align: center;
   padding: 15px;
+  font-size: 2.5em;
 }
 
 /* answer파트 */
@@ -58,13 +59,14 @@ container{
   /* border: 1px solid #000; */
   margin-top: 30px;
 }
-#answer ul{
+
+/* #answer ul{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* border: 1px dashed #000; */
+  border: 1px dashed #000;
   padding: 20px 10px;
-  /* background: lightseagreen; */
+  background: lightseagreen;
 }
 #answer ul li{
   list-style: none;
@@ -86,4 +88,4 @@ container{
 
 #answer ul li > button:active{
   background: gold;
-}
+} */

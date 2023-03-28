@@ -74,24 +74,32 @@ const quiz = {
 const countryList = quiz.countryList;
 // console.log(countryList.length); 16
 
+// let randomList = [];
+let rn = Math.floor(Math.random()*countryList.length);
+// console.log(rn);
+console.log(`국가: ${countryList[rn].country}, 수도: ${countryList[rn].capital}`);
 
-let randomList = [];
+//Question 작성
+const $quiz = document.querySelector('.country');
 
-// while(true){
-//   if(randomList.length===4){
-//     break;
-//   }else{
+$quiz.textContent = countryList[rn].country;
 
-//   }
-// }
-for(let i=0;i<4;i++){
-  countryList[Math.floor(Math.random()*countryList.length)];
+//Answer 작성, button으로 정답 제출하면 입력값을 비교
 
-  console.log(randomList);
+const $answer = document.querySelector('#answerText');
+const $button = document.querySelector('#answerCheck');
+
+$button.onclick = checkAnswer;
+
+function checkAnswer(){
+  if($answer.value === ''){
+    alert('다시 입력해주세요!!');
+    // continue;
+  }else if($answer.value === countryList[rn].capital){
+    alert("정답~~");
+  }else{
+    alert("땡!!\n정답은 "+countryList[rn].capital);
+  }
 }
 
-// console.log(`국가: ${randomList[0].country}, 수도: ${randomList[0].capital}`);
-
-//랜덤으로 뽑힌 4개의 국가 중 한 곳을 문제로 지정, 그 수도를 맞춘다
-//국가에 맞는 수도의 보기를 고를 경우 정답, 아니면 오답 처리를 한다
 
