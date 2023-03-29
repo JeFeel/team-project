@@ -4,36 +4,26 @@ import countryList from '/capital.js';
 //먼저 선언할 변수들
 
 let arr=[];
-let copyArr = [];
+// let copyArr = [];
 let randomNumber;
 
 const $quizCountry = document.querySelector('.country'); 
 const $answer = document.querySelector('#answerText');
 const $button = document.querySelector('#answerCheck');
 
-// function getFromList(){
-//   while(true){  //전체 국가 배열에서 10개를 선정하여 다른 배열에 저장(quiz)
-    
-    if(copyArr.length<10) {
-        randomNumber = Math.floor(Math.random()*countryList.length);
-        arr.push(countryList[randomNumber]);
-        
-        //중복 제거
-        copyArr = [...new Set(arr)];
-        
-    
-    }//else{
-    //   break;
-    // }
-//   };
-// }
+function getFromList(){
+  //전체 배열에서 랜덤하게 하나를 고름
+    randomNumber = Math.floor(Math.random()*countryList.length);
+    arr.push(countryList[randomNumber]);
+
+}
 
 
-// function setQuestion(){
-  let randomQuiz = Math.floor(Math.random()*copyArr.length); 
-    $quizCountry.textContent = copyArr[randomQuiz].country;
+function setQuestion(){
+  // let randomQuiz = Math.floor(Math.random()*copyArr.length); 
+    $quizCountry.textContent = arr.country;
     // console.log($quizCountry.textContent);
-    console.log(copyArr[randomQuiz]);
+
     let $quizCapital = copyArr[randomQuiz].capital;
 
     //사용자가 입력한 값이 정답이랑 맞는지 확인
@@ -48,7 +38,7 @@ const $button = document.querySelector('#answerCheck');
         alert("땡!!\n정답은 "+$quizCapital);
       }
     };
-// }
+}
 
 // getFromList();
 // console.log(copyArr);  
