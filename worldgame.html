@@ -7,15 +7,19 @@
   <title>WORLD MAP</title>
   <link rel="stylesheet" href="game.css">
   <link rel="stylesheet" href="common.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
   
   <container class="center">
+  
     <div class="setting">     
       <div class="setting-box">
-      <a href="worldgame.html" id="gameAgain">다시</a>
-      <a href="gameStart.html" id="toTitle">타이틀 화면으로</a>
+        <a href="gameStart.html" id="toTitle">타이틀 화면으로</a>
+        <a href="worldgame.html" id="gameAgain">다시</a>
       </div>
     </div>
     <div id="question">
@@ -24,16 +28,17 @@
       </div>
     </div>
     <div class="ask">
-      Q. <span class="country">이 나라</span>의 수도는?
+      <span class="country">이 나라</span>의 수도는?
     </div> 
     <div id="answer">
       <div class="box">
         <input type="text" placeholder="정답을 입력해주세요!" id="answerText">
-        <button id="answerCheck">제출</button>
-        <div class="count">정답 수: <span id="correct">0</span>/10</div>
+        <button id="answerCheck">확인</button>
+        <div class="count">정답 수: <span id="correct">0</span> / 10</div>
       </div>
       
     </div>
+    
   </container>                                        
   
   <script type="module" src="game.js"></script>

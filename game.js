@@ -47,8 +47,12 @@ function setQuestion() {
   console.log(quizCapital);
 }
 
+random();
+setQuestion();
+
 
 $button.onclick = () => {
+  // quizAnswerCheck.classList.add('.out');
 
   if ($answer.value === quizCapital) {
     alert("정답~~");
@@ -63,7 +67,4 @@ $button.onclick = () => {
     // console.log(quizCapital);   
   };
 
-  random();
-  setQuestion();
-  
   
