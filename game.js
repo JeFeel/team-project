@@ -7,11 +7,13 @@ let copyArr = [];
 let randomNumber;
 let count=0;
 let correct=document.querySelector('#correct');
-let quizAnswerCheck = document.querySelector('quizAnswerCheck')
+let quizAnswerCheck = document.querySelector('.quizAnswerCheck')
+let openAnswer = document.querySelector('#openAnswer');
 
 const $quizCountry = document.querySelector('.country');
 const $answer = document.querySelector('#answerText');
 const $button = document.querySelector('#answerCheck');
+const $nextButton = document.querySelector('#nextQuiz');
 let quizCapital;
 
 function random(){
@@ -26,19 +28,20 @@ function random(){
     copyArr.push(arr[randomNumber]); 
   }
 
- 
   // console.log(copyArr);
   //인덱스로 쓰일 숫자들이 copyArr에 저장됨
 }
 
 //문제 설정
 function setQuestion() {
+  
   console.log(count);
-  count++;
-  if(count>10){
-    return alert("게임 끝!");
+  if(count>9){
+    $button.disabled=true;
+    $nextButton.disabled=true;
+    return openAnswer.innerHTML=`게임 끝!<br>다시 하려면<br> [다시] 버튼을 눌러주세요`;
   }
-
+  count++;
   const quizIdx = copyArr[copyArr.length - 1]; 
   const quiz = countryList[quizIdx];
   $quizCountry.textContent = quiz.country;
@@ -47,24 +50,46 @@ function setQuestion() {
   console.log(quizCapital);
 }
 
-random();
-setQuestion();
 
 
-$button.onclick = () => {
-  // quizAnswerCheck.classList.add('.out');
+//확인 버튼 누를때
+function answerCheck(){
+  quizAnswerCheck.classList.add('out');
+  $button.disabled=true;
 
   if ($answer.value === quizCapital) {
-    alert("정답~~");
+    // alert("정답~~");
+    openAnswer.innerHTML = `정답~~`;
     correct.textContent++;
   } else {
-    alert("땡!!\n정답은 " + quizCapital);
+    // alert("땡!!\n정답은 " + quizCapital);
+    openAnswer.innerHTML= `땡!<br>정답은 ${quizCapital}`;  
+    // console.log("땡!!\n정답은 "+ quizCapital);
   }
+  
   copyArr.pop();
+  // console.log(quizCapital);   
+};
+
+
+function showAnswer(){
+  quizAnswerCheck.classList.remove('out');
+  $button.disabled=false;
+  openAnswer.innerHTML='';
   setQuestion();  
   $answer.value = '';
   $answer.focus();
-    // console.log(quizCapital);   
-  };
+  
+  }
+
+  //다음 문제 넘어가는 함수, button 누르면 out 속성 해제
+
+
+
+  random();
+  setQuestion();
+  
+  $button.addEventListener('click', answerCheck);
+  $nextButton.addEventListener('click', showAnswer);
 
   
