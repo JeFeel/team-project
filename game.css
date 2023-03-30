@@ -136,11 +136,13 @@ container .buttonbox {
   background: rgba(255, 255, 255, 0.3);
   position: absolute;
   top: 45%;
-  width: 40%;
+  width: fit-content;
   text-align: center;
   border-radius: 20px;
   padding: 10px;
-} */
+  display: block;
+  font-size: 2.5em;
+} 
 
 /* container .start {
   width: 150px;
