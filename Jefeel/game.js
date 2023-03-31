@@ -39,6 +39,8 @@ function setQuestion() {
   if(count>9){
     $button.disabled=true;
     $nextButton.disabled=true;
+    openAnswer.classList.add('bg');
+    openAnswer.classList.add('end');
     return openAnswer.innerHTML=`게임 끝!<br>다시 하려면<br> [다시] 버튼을 눌러주세요`;
   }
   count++;
@@ -55,6 +57,7 @@ function setQuestion() {
 //확인 버튼 누를때
 function answerCheck(){
   quizAnswerCheck.classList.add('out');
+  quizAnswerCheck.classList.add('bg');
   $nextButton.style.display="block";
   $button.disabled=true;
 
@@ -64,7 +67,7 @@ function answerCheck(){
     correct.textContent++;
   } else {
     // alert("땡!!\n정답은 " + quizCapital);
-    openAnswer.innerHTML= `땡!<br>정답은 ${quizCapital}`;  
+    openAnswer.innerHTML= `땡! 정답은&nbsp;<span style="color: red">${quizCapital}</span>`;  
     // console.log("땡!!\n정답은 "+ quizCapital);
   }
   
@@ -75,6 +78,7 @@ function answerCheck(){
 
 function showAnswer(){
   quizAnswerCheck.classList.remove('out');
+  quizAnswerCheck.classList.remove('bg');
   $nextButton.style.display="none";
 
   $button.disabled=false;
