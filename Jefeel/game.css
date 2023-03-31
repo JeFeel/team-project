@@ -37,10 +37,7 @@ container.center {
 }
 .center .setting .setting-box a {
   /* border: 1px solid #000; */
-  border-radius: 20px;
   box-shadow: 0 5px 5px -5px #333;
-  /* display: inline-block; */
-  background: rgba(255, 255, 255, 0.3);
   /* background: red; */
   padding: 15px;
 }
@@ -48,9 +45,7 @@ container.center {
 .center #home {
   position: absolute;
   bottom: 20%;
-  border-radius: 20px;
   box-shadow: 0 5px 5px -5px #333;
-  background: rgba(255, 255, 255, 0.3);
   width: fit-content;
   padding: 15px;
 }
@@ -92,22 +87,26 @@ container.center {
   justify-content: center;
   text-align: center;
   font-size: 2em;
-  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgb(7, 155, 192);
 }
 #question .quizAnswerCheck #nextQuiz{
   width: 100px;
   height: 50px;
   background: yellowgreen;
+  border: 0;
+  border-radius: 20px;
   margin: 0 auto;
   cursor: pointer;
   display: none;
+  font-weight: 700;
+  font-size: 1.1em;
 }
 .ask {
   width: 60%;
   height: 100px;
   /* border: 1px solid #000; */
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
   margin: 10px auto;
   text-align: center;
   padding: 15px;
@@ -119,14 +118,12 @@ container.center {
 #answer {
   width: 60%;
   height: 20%;
-  background: rgba(255, 255, 255, 0.3);
   /* border: 1px solid #000; */
   /* margin-top: 30px; */
   margin-bottom: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
 }
 
 #answer .box {
@@ -176,12 +173,10 @@ container.center {
 }
 
 container .buttonbox {
-  background: rgba(255, 255, 255, 0.3);
   position: absolute;
   top: 45%;
   width: fit-content;
   text-align: center;
-  border-radius: 20px;
   padding: 15px;
   display: block;
   font-size: 2.5em;
@@ -189,9 +184,17 @@ container .buttonbox {
 
 /* 추가되는 속성 */
 .out{
-  /* display: block !important;  */
-  /* display: inline; */
-  /* display: flex; */
-  /* background: skyblue; */
   z-index: -1; 
+}
+
+.bg{
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+.quizAnswerCheck.bg{
+  z-index: -10;
+}
+.end{
+  background: rgb(91, 165, 104);
+  color: #fff !important;
 }
