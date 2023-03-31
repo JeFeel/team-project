@@ -10,7 +10,7 @@ body {
 container.center {
   width: 50%;
   height: 800px;
-  background: #ccc url('world_map.jpg') no-repeat center/cover;
+  background: #ccc url('/Jefeel/world_map.jpg') no-repeat center/cover;
   border: 1px solid #000;
   /* position: relative; */
   display: flex;
@@ -58,7 +58,9 @@ container.center {
 /* question파트 */
 #question {
   /* border: 1px solid #000; */
-  background: url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif')
+  /* background: url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif')
+  no-repeat center/contain; */
+  background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmMwYWU1YWE0MWFmMmU3NThkY2FiNTJkNjU3MWI5NDc1MmFiMjZlZSZjdD1z/fU4rqm0AHZtqGED9m4/giphy.gif')
   no-repeat center/contain;
   width: 70%;
   height: 50%;
@@ -187,6 +189,7 @@ container .buttonbox {
 
 /* 추가되는 속성 */
 .out{
+  /* display: block; */
   /* display: inline; */
   /* display: flex; */
   /* background: skyblue; */

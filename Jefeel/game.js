@@ -1,4 +1,4 @@
-import countryList from '/capital.js';
+import countryList from '/Jefeel/capital.js';
 
 //먼저 선언할 변수들
 
@@ -55,6 +55,7 @@ function setQuestion() {
 //확인 버튼 누를때
 function answerCheck(){
   quizAnswerCheck.classList.add('out');
+  $nextButton.classList.add('out');
   $button.disabled=true;
 
   if ($answer.value === quizCapital) {
@@ -74,6 +75,7 @@ function answerCheck(){
 
 function showAnswer(){
   quizAnswerCheck.classList.remove('out');
+  $nextButton.classList.remove('out');
   $button.disabled=false;
   openAnswer.innerHTML='';
   setQuestion();  
