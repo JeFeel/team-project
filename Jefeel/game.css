@@ -1,6 +1,5 @@
 *{
   font-family: 'Gothic A1', sans-serif;
-
 }
 body {
   font-size: 20px;
@@ -10,7 +9,7 @@ body {
 container.center {
   width: 50%;
   height: 800px;
-  background: #ccc url('/Jefeel/world_map.jpg') no-repeat center/cover;
+  background: #ccc url('world_map.jpg') no-repeat center/cover;
   border: 1px solid #000;
   /* position: relative; */
   display: flex;
@@ -93,7 +92,7 @@ container.center {
   justify-content: center;
   text-align: center;
   font-size: 2em;
-  color: #fff;
+  color: #ffffff;
 }
 #question .quizAnswerCheck #nextQuiz{
   width: 100px;
@@ -101,7 +100,7 @@ container.center {
   background: yellowgreen;
   margin: 0 auto;
   cursor: pointer;
-  /* display: none; */
+  display: none;
 }
 .ask {
   width: 60%;
@@ -152,10 +151,11 @@ container.center {
   appearance: none;
 
   width: 50%;
-  height: 30px;
+  height: 50px;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.3);
   text-align: center;
+  font-size: 1.5em;
 }
 
 #answer .box #answerCheck {
@@ -189,7 +189,7 @@ container .buttonbox {
 
 /* 추가되는 속성 */
 .out{
-  /* display: block; */
+  /* display: block !important;  */
   /* display: inline; */
   /* display: flex; */
   /* background: skyblue; */
